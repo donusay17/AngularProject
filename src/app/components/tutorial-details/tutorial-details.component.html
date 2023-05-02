@@ -1,0 +1,96 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentTutorial.id">
+    <h4>Kullanıcı Detay:</h4>
+    <div>
+      <label><strong>İsim:</strong></label> {{ currentTutorial.title }}
+    </div>
+    <div>
+      <label><strong>Soyisim:</strong></label>
+      {{ currentTutorial.description }}
+    </div>
+ 
+<button 
+    
+    class="m-3 btn btn-sm btn-danger"
+      routerLink="/tutorials/{{ currentTutorial.id }}"
+    >
+      Düzenle
+    </button>
+
+   
+  </div>
+
+  <div *ngIf="!currentTutorial">
+    <br />
+    <p>Please click on a Tutorial...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentTutorial.id" class="edit-form">
+    <h4>Kullanıcı Detay</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">İsim</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTutorial.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Soyisim</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTutorial.description"
+          name="description"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Boy</label>
+        <input
+          type="text"
+          class="form-control"
+          id="height"
+          [(ngModel)]="currentTutorial.height"
+          name="height"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Kilo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="weight"
+          [(ngModel)]="currentTutorial.weight"
+          name="weight"
+        />
+      </div>
+     
+    </form>
+
+  
+
+    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+     Sil
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateTutorial()"
+    >
+      Güncelle
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentTutorial.id">
+    <br />
+    <p>Bu kişiye erişilemiyor...</p>
+  </div>
+</ng-template>

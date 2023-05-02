@@ -1,0 +1,69 @@
+
+
+    <div>
+        <div class="submit-form">
+          <div *ngIf="!submitted">
+            <div class="form-group">
+              <label for="title">İsim</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                required
+                [(ngModel)]="tutorial.title"
+                name="title"
+              />
+            </div>
+      
+            <div class="form-group">
+              <label for="description">Soyisim</label>
+              <input
+                class="form-control"
+                id="description"
+                required
+                [(ngModel)]="tutorial.description"
+                name="description"
+              />
+            </div>
+
+            <div>
+              <div class="submit-form">
+                <div *ngIf="!submitted">
+                  <div class="form-group">
+                    <label for="title">Boy</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="title"
+                      required
+                      [(ngModel)]="tutorial.height"
+                      name="title"
+                    />
+                  </div>
+                  <div>
+                    <div class="submit-form">
+                      <div *ngIf="!submitted">
+                        <div class="form-group">
+                          <label for="title">Kilo</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            required
+                            [(ngModel)]="tutorial.weight"
+                            name="title"
+                          />
+                        </div>
+                        
+      
+            <button (click)="saveTutorial()" class="btn btn-success"
+            style="background-color: rgb(86, 126, 236);">Ekle</button>
+          </div>
+      
+          <div *ngIf="submitted">
+            <h4>Kullanıcı bilgileri başarıyla eklendi!</h4>
+            <button class="btn btn-success" (click)="newTutorial()"
+            style="background-color: rgb(86, 126, 236);">Tekrar Ekle</button>
+          </div>
+        </div>
+      </div>
