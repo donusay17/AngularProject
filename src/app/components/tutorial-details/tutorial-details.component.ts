@@ -18,7 +18,8 @@ export class TutorialDetailsComponent implements OnInit {
     description: '',
     published: false,
     height: 0,
-    weight: 0
+    weight: 0,
+    bmi: 0,
   };
   
   message = '';
@@ -60,7 +61,7 @@ export class TutorialDetailsComponent implements OnInit {
         next: (res) => {
           console.log(res);
           this.currentTutorial.published = status;
-          this.message = res.message ? res.message : 'The status was updated successfully!';
+          this.message = res.message ? res.message : 'Kullanıcı bilgileri başarıyla güncellendi';
         },
         error: (e) => console.error(e)
       });

@@ -5,5 +5,6 @@ export class Tutorial {
     published?: boolean;
     height?: number;
     weight?: number;
+    bmi?: number;
 
   }
