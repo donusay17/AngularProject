@@ -48,7 +48,7 @@ export class AddTutorialComponent implements OnInit {
       description: '',
       published: false,
       height: 0,
-     weight: 0
+      weight: 0
       
     };
   }
