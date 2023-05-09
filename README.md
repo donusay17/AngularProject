@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+##
+Kullanıcı İsim, soyisim , boy ve kilo bilgilerini girdikten sonra 'Ekle' butonuna basıp bilgilerini listeye ekleyebilir. 
+![WhatsApp Image 2023-05-07 at 02 45 48](https://github.com/donusay17/AngularProject/assets/83464038/a89621fe-cbe2-44a8-82c3-16602ebb048a)
+
+##
+Girilen kullanıcı bilgileri güncellenip silinebilir.
+![WhatsApp Image 2023-05-07 at 02 45 33](https://github.com/donusay17/AngularProject/assets/83464038/0af240ad-46b4-44c6-8e8a-9260d8f8a279)
+
+##
+Tüm kullanıcıların listesi ve bilgileri listelenir.
+![WhatsApp Image 2023-05-07 at 02 45 16](https://github.com/donusay17/AngularProject/assets/83464038/dee5f9fe-fd2e-4dbf-af4a-5249410a2b72)
